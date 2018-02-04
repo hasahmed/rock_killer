@@ -1,0 +1,574 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/Asteroids.gd" type="Script" id=1]
+[ext_resource path="res://media/assets/astroid_field/asteroids.obj" type="ArrayMesh" id=2]
+
+[sub_resource type="SpatialMaterial" id=1]
+
+render_priority = 0
+flags_transparent = false
+flags_unshaded = false
+flags_vertex_lighting = false
+flags_no_depth_test = false
+flags_use_point_size = false
+flags_world_triplanar = false
+flags_fixed_size = false
+flags_albedo_tex_force_srgb = false
+vertex_color_use_as_albedo = false
+vertex_color_is_srgb = false
+params_diffuse_mode = 0
+params_specular_mode = 0
+params_blend_mode = 0
+params_cull_mode = 0
+params_depth_draw_mode = 0
+params_line_width = 1.0
+params_point_size = 1.0
+params_billboard_mode = 0
+params_grow = false
+params_use_alpha_scissor = false
+albedo_color = Color( 0.0351562, 0.0314484, 0.0314484, 1 )
+metallic = 0.0
+metallic_specular = 0.5
+metallic_texture_channel = 0
+roughness = 0.0
+roughness_texture_channel = 0
+emission_enabled = false
+normal_enabled = false
+rim_enabled = false
+clearcoat_enabled = false
+anisotropy_enabled = false
+ao_enabled = false
+depth_enabled = false
+subsurf_scatter_enabled = false
+transmission_enabled = false
+refraction_enabled = false
+detail_enabled = false
+uv1_scale = Vector3( 1, 1, 1 )
+uv1_offset = Vector3( 0, 0, 0 )
+uv1_triplanar = false
+uv1_triplanar_sharpness = 1.0
+uv2_scale = Vector3( 1, 1, 1 )
+uv2_offset = Vector3( 0, 0, 0 )
+uv2_triplanar = false
+uv2_triplanar_sharpness = 1.0
+proximity_fade_enable = false
+distance_fade_enable = false
+_sections_unfolded = [ "Albedo" ]
+
+[node name="AsteroidField" type="Spatial"]
+
+transform = Transform( 20, 0, 0, 0, 20, 0, 0, 0, 20, 0, -2.32227, 0 )
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="AstroidFieldMeshInstance" type="MeshInstance" parent="." index="0"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -16.8761, 0 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 2 )
+skeleton = NodePath("..")
+material/0 = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="AstroidFieldMeshInstance8" type="MeshInstance" parent="." index="1"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -16.8761, 16.1935 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 2 )
+skeleton = NodePath("..")
+material/0 = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="AstroidFieldMeshInstance13" type="MeshInstance" parent="." index="2"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -16.8761, 32.4364 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 2 )
+skeleton = NodePath("..")
+material/0 = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="AstroidFieldMeshInstance19" type="MeshInstance" parent="." index="3"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -16.8761, 49.1772 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 2 )
+skeleton = NodePath("..")
+material/0 = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="AstroidFieldMeshInstance25" type="MeshInstance" parent="." index="4"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -16.8761, -20.5735 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 2 )
+skeleton = NodePath("..")
+material/0 = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="AstroidFieldMeshInstance26" type="MeshInstance" parent="." index="5"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -16.8761, -38.4069 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 2 )
+skeleton = NodePath("..")
+material/0 = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="AstroidFieldMeshInstance2" type="MeshInstance" parent="." index="6"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.8024, -16.8761, 0 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 2 )
+skeleton = NodePath("..")
+material/0 = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="AstroidFieldMeshInstance10" type="MeshInstance" parent="." index="7"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.8024, -16.8761, 16.1935 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 2 )
+skeleton = NodePath("..")
+material/0 = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="AstroidFieldMeshInstance11" type="MeshInstance" parent="." index="8"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.8024, -16.8761, 32.4364 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 2 )
+skeleton = NodePath("..")
+material/0 = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="AstroidFieldMeshInstance20" type="MeshInstance" parent="." index="9"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.8024, -16.8761, 49.1772 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 2 )
+skeleton = NodePath("..")
+material/0 = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="AstroidFieldMeshInstance22" type="MeshInstance" parent="." index="10"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.8024, -16.8761, -20.5735 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 2 )
+skeleton = NodePath("..")
+material/0 = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="AstroidFieldMeshInstance27" type="MeshInstance" parent="." index="11"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.8024, -16.8761, -38.4069 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 2 )
+skeleton = NodePath("..")
+material/0 = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="AstroidFieldMeshInstance3" type="MeshInstance" parent="." index="12"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.6022, -16.8761, 0 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 2 )
+skeleton = NodePath("..")
+material/0 = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="AstroidFieldMeshInstance6" type="MeshInstance" parent="." index="13"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.6022, -16.8761, 16.1935 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 2 )
+skeleton = NodePath("..")
+material/0 = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="AstroidFieldMeshInstance15" type="MeshInstance" parent="." index="14"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.6022, -16.8761, 32.4364 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 2 )
+skeleton = NodePath("..")
+material/0 = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="AstroidFieldMeshInstance18" type="MeshInstance" parent="." index="15"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.6022, -16.8761, 49.1772 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 2 )
+skeleton = NodePath("..")
+material/0 = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="AstroidFieldMeshInstance21" type="MeshInstance" parent="." index="16"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.6022, -16.8761, -20.5735 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 2 )
+skeleton = NodePath("..")
+material/0 = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="AstroidFieldMeshInstance28" type="MeshInstance" parent="." index="17"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.6022, -16.8761, -38.4069 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 2 )
+skeleton = NodePath("..")
+material/0 = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="AstroidFieldMeshInstance4" type="MeshInstance" parent="." index="18"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -47.0693, -16.8761, 0 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 2 )
+skeleton = NodePath("..")
+material/0 = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="AstroidFieldMeshInstance9" type="MeshInstance" parent="." index="19"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -47.0693, -16.8761, 16.1935 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 2 )
+skeleton = NodePath("..")
+material/0 = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="AstroidFieldMeshInstance12" type="MeshInstance" parent="." index="20"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -47.0693, -16.8761, 32.4364 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 2 )
+skeleton = NodePath("..")
+material/0 = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="AstroidFieldMeshInstance16" type="MeshInstance" parent="." index="21"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -47.0693, -16.8761, 49.1772 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 2 )
+skeleton = NodePath("..")
+material/0 = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="AstroidFieldMeshInstance23" type="MeshInstance" parent="." index="22"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -47.0693, -16.8761, -20.5735 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 2 )
+skeleton = NodePath("..")
+material/0 = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="AstroidFieldMeshInstance30" type="MeshInstance" parent="." index="23"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -47.0693, -16.8761, -38.4069 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 2 )
+skeleton = NodePath("..")
+material/0 = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="AstroidFieldMeshInstance5" type="MeshInstance" parent="." index="24"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 44.6275, -16.8761, 0 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 2 )
+skeleton = NodePath("..")
+material/0 = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="AstroidFieldMeshInstance7" type="MeshInstance" parent="." index="25"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 44.6275, -16.8761, 16.1935 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 2 )
+skeleton = NodePath("..")
+material/0 = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="AstroidFieldMeshInstance14" type="MeshInstance" parent="." index="26"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 44.6275, -16.8761, 32.4364 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 2 )
+skeleton = NodePath("..")
+material/0 = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="AstroidFieldMeshInstance17" type="MeshInstance" parent="." index="27"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 44.6275, -16.8761, 49.1772 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 2 )
+skeleton = NodePath("..")
+material/0 = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="AstroidFieldMeshInstance24" type="MeshInstance" parent="." index="28"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 44.6275, -16.8761, -20.5735 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 2 )
+skeleton = NodePath("..")
+material/0 = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="AstroidFieldMeshInstance29" type="MeshInstance" parent="." index="29"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 44.6275, -16.8761, -38.4069 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 2 )
+skeleton = NodePath("..")
+material/0 = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+

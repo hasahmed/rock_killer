@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/asteroids.obj-713b26ac4f631715c637c459694319ef.mesh"
+
+[deps]
+
+files=[ "res://.import/asteroids.obj-713b26ac4f631715c637c459694319ef.mesh" ]
+
+source_file="res://media/assets/astroid_field/asteroids.obj"
+source_md5="6e03a35eff60b2a0404186a9468f0d64"
+
+dest_files=[ "res://.import/asteroids.obj-713b26ac4f631715c637c459694319ef.mesh", "res://.import/asteroids.obj-713b26ac4f631715c637c459694319ef.mesh" ]
+dest_md5="b7a4f053e43977483438930f2d07ea21"
+
+[params]
+
+generate_tangents=true
