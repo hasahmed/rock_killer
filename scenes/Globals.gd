@@ -16,6 +16,11 @@ func increment_score():
 func update_score_label_text():
 	score_label.text = "score: " + str(score)
 
+
+func _input(ev):
+	if ev.is_action_pressed("reset_game"):
+		get_tree().change_scene('res://scenes/Main.tscn')
+
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
