@@ -14,10 +14,6 @@ config/name="rock_killer"
 run/main_scene="res://scenes/Main.tscn"
 config/icon="res://icon.png"
 
-[autoload]
-
-Globals="*res://scenes/Globals.gd"
-
 [display]
 
 window/size/height=800

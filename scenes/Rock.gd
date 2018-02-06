@@ -11,13 +11,14 @@ class rock_props:
 
 var rot_speed = rock_props.new()
 var rock_scn
+var explosion_scn
 
 func _ready():
 	rock_scn = load('res://scenes/Rock.tscn')
+	explosion_scn = load('res://scenes/RockParticles.tscn')
 
 func _process(delta):
-	# print(self.get_node("rock_mesh").global_transform[0].x)
-	# print(self.get_node("rock_mesh").global_transform[0].x)
+	if self.translation.z > ($'/root/Main/Globals'.viewport_size.y / 5): self.queue_free()
 	self.translation.z += rot_speed.speed.x * delta
 	self.translation.x += rot_speed.speed.y * delta
 	rotate(delta)
@@ -25,9 +26,14 @@ func _process(delta):
 
 func _on_rock_area_area_entered(other_area):
 	var ROCK_SHIFT = 7
+	var explosion = explosion_scn.instance()
+	explosion.init(self.rot_speed, self.translation)
+	# explosion.translation = self.translation
+	# explosion.speed = self.rot_speed.speed
+	$'/root/Main'.call_deferred('add_child', explosion)
 	if other_area.get_name() == "laser_area":
 		if self.scale.x < 1:
-			Globals.increment_score()
+			$'/root/Main/Globals'.increment_score()
 		else:
 			for i in [-1, 1]:
 				var rock = rock_scn.instance()
@@ -41,8 +47,8 @@ func _on_rock_area_area_entered(other_area):
 		other_area.get_parent().destory()
 		self.queue_free()
 	elif other_area.get_name() == "missle_area":
-		Globals.increment_score()
-		other_area.get_parent().destory()
+		$'/root/Main/Globals'.increment_score()
+		other_area.get_parent().queue_free()
 		self.queue_free()
 
 func rotate(delta):

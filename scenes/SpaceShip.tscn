@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scenes/Player.gd" type="Script" id=1]
 [ext_resource path="res://media/assets/space_ship_dae/lambert4SG.material" type="Material" id=2]
 [ext_resource path="res://media/assets/space_ship_dae/lambert2SG.material" type="Material" id=3]
 [ext_resource path="res://media/assets/space_ship_dae/lambert3SG.material" type="Material" id=4]
 [ext_resource path="res://scenes/LaserHolder.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/Exhaust.tscn" type="PackedScene" id=6]
 
 [sub_resource type="ArrayMesh" id=1]
 
@@ -125,6 +126,16 @@ disabled = false
 [node name="LaserCannon" parent="." index="4" instance=ExtResource( 5 )]
 
 transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.5, 0.0266936, -1.01577, 19.3096 )
+
+[node name="Particles" parent="." index="5" instance=ExtResource( 6 )]
+
+transform = Transform( -2.99854, 0, 0.0936701, 0, 3, 0, -0.0936701, 0, -2.99854, -3.86312, 0, -11.9847 )
+_sections_unfolded = [ "Draw Passes", "Drawing", "Process Material", "Time", "Transform" ]
+
+[node name="Particles2" parent="." index="6" instance=ExtResource( 6 )]
+
+transform = Transform( -2.99854, 0, 0.0936701, 0, 3, 0, -0.0936701, 0, -2.99854, 4.12944, 0, -11.9847 )
+_sections_unfolded = [ "Draw Passes", "Drawing", "Process Material", "Time", "Transform" ]
 
 [connection signal="area_entered" from="space_ship_area" to="." method="_on_space_ship_area_area_entered"]
 
