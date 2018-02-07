@@ -4,12 +4,11 @@ extends RichTextLabel
 # var a = 2
 # var b = "textvar"
 var player
+var str_prefix = "missiles: "
 
 func _ready():
-	player = $'/root/Main/SpaceShip'
-	print(player.missiles)
+	update_label()
 
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
+
+func update_label():
+	text = str_prefix + str(get_parent().missiles)

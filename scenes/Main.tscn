@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scenes/Globals.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Camera.gd" type="Script" id=2]
@@ -6,8 +6,7 @@
 [ext_resource path="res://scenes/AsteroidField.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/RockSpawnTimer.gd" type="Script" id=5]
 [ext_resource path="res://media/images/stary_bg.png" type="Texture" id=6]
-[ext_resource path="res://scenes/MissleInCapsul.tscn" type="PackedScene" id=7]
-[ext_resource path="res://scenes/PlayerMissilesLabel.gd" type="Script" id=8]
+[ext_resource path="res://scenes/MissileInCapsul.tscn" type="PackedScene" id=7]
 
 [sub_resource type="ProceduralSky" id=1]
 
@@ -231,6 +230,7 @@ wait_time = 2.0
 one_shot = false
 autostart = true
 script = ExtResource( 5 )
+missile_powerup_percentage = 10
 
 [node name="ScoreLabel" type="RichTextLabel" parent="." index="9"]
 
@@ -293,35 +293,6 @@ region_rect = Rect2( 0, 0, 10000, 10000 )
 _sections_unfolded = [ "Geometry", "Region", "Transform" ]
 
 [node name="GlassCapsul" parent="." index="11" instance=ExtResource( 7 )]
-
-[node name="PlayerMissilesLabel" type="RichTextLabel" parent="." index="12"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 866.0
-margin_top = 705.0
-margin_right = 970.0
-margin_bottom = 745.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-bbcode_enabled = false
-bbcode_text = ""
-visible_characters = -1
-percent_visible = 1.0
-meta_underlined = true
-tab_size = 4
-text = ""
-scroll_active = true
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
-script = ExtResource( 8 )
 
 [connection signal="timeout" from="RockSpawnTimer" to="RockSpawnTimer" method="_on_RockSpawnTimer_timeout"]
 

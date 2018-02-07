@@ -1,8 +1,5 @@
 extends Spatial
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
 var missle_scn
 var laser_scn
 var main
@@ -22,16 +19,11 @@ func _on_space_ship_area_area_entered( other_area ):
 	if other_area.get_name() == "rock_area":
 		self.queue_free()
 	elif other_area.get_name() == 'glass_capsul_area':
-		missiles += 1
+		increment_missiles()
 
 func _input(ev):
 	if ev.is_action_pressed("shoot_missle"):
 		shoot_missile()
-		# for i in range(2):
-		# 	var missle = missle_scn.instance()
-		# 	missle.translation = get_node(cannon_lr()).global_transform.origin
-		# 	missle.translation.y = 0
-		# 	main.call_deferred("add_child", missle)
 	elif ev.is_action_pressed("shoot_laser"):
 		var laser = laser_scn.instance()
 		laser.translation = get_node('LaserCannon').global_transform.origin
@@ -48,9 +40,17 @@ func cannon_lr():
 
 func shoot_missile():
 	if missiles > 0:
-		missiles -= 1
+		decrement_missiles()
 		for i in range(2):
 			var missle = missle_scn.instance()
 			missle.translation = get_node(cannon_lr()).global_transform.origin
 			missle.translation.y = 0
 			main.call_deferred("add_child", missle)
+
+func increment_missiles():
+	missiles += 1
+	$'missiles_label'.update_label()
+
+func decrement_missiles():
+	missiles -= 1
+	$'missiles_label'.update_label()
